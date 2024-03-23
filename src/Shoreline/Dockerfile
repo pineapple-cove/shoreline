@@ -5,10 +5,9 @@ WORKDIR /app
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["src/Shoreline/Shoreline.csproj", "Shoreline/"]
-RUN dotnet restore "src/Shoreline/Shoreline.csproj"
+COPY ["Shoreline.csproj", "./"]
+RUN dotnet restore "Shoreline.csproj"
 COPY . .
-WORKDIR "/src/Shoreline"
 RUN dotnet build "Shoreline.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish

@@ -1,4 +1,4 @@
-namespace shoreline;
+namespace Shoreline;
 
 public class Worker : BackgroundService
 {

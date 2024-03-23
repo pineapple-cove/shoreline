@@ -1,0 +1,8 @@
+﻿version: '3.9'
+
+services:
+  shoreline:
+    build:
+        context: ./src/Shoreline
+        dockerfile: Dockerfile
+    restart: always
