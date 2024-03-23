@@ -1,12 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Worker">
 
     <PropertyGroup>
-        <LangVersion>latest</LangVersion>
         <RootNamespace>Shoreline</RootNamespace>
-        
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
         
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <UserSecretsId>dotnet-shoreline-D8FDF9C8-637C-483F-A449-3A359E2B17EC</UserSecretsId>
