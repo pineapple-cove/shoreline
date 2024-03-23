@@ -2,12 +2,14 @@
 
     <PropertyGroup>
         <LangVersion>latest</LangVersion>
-        <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <UserSecretsId>dotnet-shoreline-D8FDF9C8-637C-483F-A449-3A359E2B17EC</UserSecretsId>
-        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
         <RootNamespace>Shoreline</RootNamespace>
+        
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>dotnet-shoreline-D8FDF9C8-637C-483F-A449-3A359E2B17EC</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -19,4 +21,5 @@
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
+    
 </Project>
