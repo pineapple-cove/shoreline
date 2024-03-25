@@ -15,3 +15,6 @@ Get started by reviewing the answers to the following questions:
 - [How can I help?](./CONTRIBUTING.md)
 - [What's the latest?](./resources/RELEASE_NOTES.md)
 - [Where are we going next?](./resources/ROADMAP.md)
+
+Once you've cloned the repository locally, you'll need to create a `.env` file for environment variables.
+You can use the `.env.example` file as a template and populate it with the necessary values.

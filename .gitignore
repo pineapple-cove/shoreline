@@ -10,6 +10,9 @@ riderModule.iml
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
+# Ignore environment variables as they contain sensitive data
+.env
+
 # Local History for Visual Studio Code
 .history/
 
