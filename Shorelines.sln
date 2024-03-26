@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoreline.Providers.Discord", "src\Shoreline.Providers.Discord\Shoreline.Providers.Discord.csproj", "{57522DAC-FB06-44E1-B469-4D6369502F9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D59F09-9FA5-43A7-B554-2472FAD4EE9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoreline.Commands", "src\Shoreline.Commands\Shoreline.Commands.csproj", "{B4AC55DB-7089-4066-A351-CD912B70E572}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoreline", "src\Shoreline\Shoreline.csproj", "{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4AC55DB-7089-4066-A351-CD912B70E572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4AC55DB-7089-4066-A351-CD912B70E572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4AC55DB-7089-4066-A351-CD912B70E572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4AC55DB-7089-4066-A351-CD912B70E572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57522DAC-FB06-44E1-B469-4D6369502F9C} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
+		{B4AC55DB-7089-4066-A351-CD912B70E572} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
+		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
+	EndGlobalSection
+EndGlobal
