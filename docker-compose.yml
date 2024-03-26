@@ -1,8 +1,9 @@
-﻿version: '3.9'
-
-services:
-  shoreline:
+﻿services:
+  discord:
     build:
-        context: ./src/Shoreline
-        dockerfile: Dockerfile
+      context: ./src/Shoreline.Providers.Discord
+      dockerfile: Dockerfile
     restart: always
+    volumes:
+      - ./src/Shoreline.Providers.Discord/appsettings.json:/app/appsettings.json
+      - ./src/Shoreline.Providers.Discord/secrets.json:/app/secrets.json
