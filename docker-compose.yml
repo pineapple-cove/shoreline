@@ -7,3 +7,5 @@
     volumes:
       - ./src/Shoreline.Providers.Discord/appsettings.json:/app/appsettings.json
       - ./src/Shoreline.Providers.Discord/secrets.json:/app/secrets.json
+    env_file:
+      - .env

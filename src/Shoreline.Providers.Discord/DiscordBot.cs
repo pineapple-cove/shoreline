@@ -3,6 +3,8 @@ using System.Diagnostics.CodeAnalysis;
 using Discord;
 using Discord.WebSocket;
 
+using Shoreline.Providers.Discord.Variables;
+
 namespace Shoreline.Providers.Discord;
 
 /// <summary>
@@ -16,7 +18,7 @@ namespace Shoreline.Providers.Discord;
 internal sealed class DiscordBot(
     DiscordSocketClient client,
     ILogger<DiscordBot> logger,
-    IConfiguration configuration,
+    IEnvironmentVariable<DiscordToken> token,
     IHostApplicationLifetime lifetime) : IHostedService
 {
     /// <inheritdoc />
@@ -24,8 +26,7 @@ internal sealed class DiscordBot(
         CancellationToken cancellationToken)
     {
         logger.LogInformation("Attempting to connect to Discord.");
-        var token = configuration["DiscordToken"];
-        if (string.IsNullOrWhiteSpace(token))
+        if (string.IsNullOrWhiteSpace(token.Value))
         {
             logger.LogError("Discord token is missing.");
             lifetime.StopApplication();
@@ -33,7 +34,7 @@ internal sealed class DiscordBot(
         }
 
         client.Log += LogAsync;
-        await client.LoginAsync(TokenType.Bot, token).ConfigureAwait(false);
+        await client.LoginAsync(TokenType.Bot, token.Value).ConfigureAwait(false);
         await client.StartAsync().ConfigureAwait(false);
     }
 
