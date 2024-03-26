@@ -12,6 +12,7 @@ riderModule.iml
 
 # Ignore environment variables as they contain sensitive data
 .env
+secrets.json
 
 # Local History for Visual Studio Code
 .history/
