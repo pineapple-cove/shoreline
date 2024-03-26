@@ -1,13 +1,70 @@
 ﻿<Project>
-    
-    <PropertyGroup>
-        <LangVersion>latest</LangVersion>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>true</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        
+
+    <PropertyGroup Label="General Project Details">
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+        <Title>$(AssemblyName)</Title>
+        <FileVersion>$(Version)</FileVersion>
+        <AssemblyVersion>$(Version)</AssemblyVersion>
     </PropertyGroup>
-    
+
+    <PropertyGroup Label="Package Details">
+        <Authors>tacosontitan</Authors>
+        <Copyright>Copyright © 2024 tacosontitan and contibutors</Copyright>
+        <PackageProjectUrl>https://github.com/tacosontitan/shoreline</PackageProjectUrl>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
+        <IncludeSymbols>True</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/tacosontitan/shoreline</RepositoryUrl>
+    </PropertyGroup>
+
+    <ItemGroup Label="Testing References" Condition="'$(IsTestProject)' == 'true'" >
+        <PackageReference Include="xunit" Version="2.7.0"/>
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.5.7"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0"/>
+        <PackageReference Include="coverlet.collector" Version="6.0.2"/>
+
+        <Using Include="Xunit"/>
+        <Using Include="JetBrains.Annotations"/>
+        <Using Include="System.Diagnostics.CodeAnalysis"/>
+    </ItemGroup>
+
+    <ItemGroup Label="Core Resources">
+        <None Include="..\..\resources\textures\icon.png" Link=".resources\textures\icon.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+        <None Include="..\..\README.md" Link=".resources\README.md">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup Label="Licensing Resources">
+        <None Include="..\..\NOTICES.md" Link=".resources\licensing\NOTICES.md"/>
+        <None Include="..\..\LICENSE" Link=".resources\licensing\LICENSE">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup Label="Community Resources">
+        <None Include="..\..\CONTRIBUTING.md" Link=".resources\community\CONTRIBUTING.md"/>
+        <None Include="..\..\CODE_OF_CONDUCT.md" Link=".resources\community\CODE_OF_CONDUCT.md"/>
+        <None Include="..\..\SECURITY.md" Link=".resources\community\SECURITY.md"/>
+    </ItemGroup>
+
+    <ItemGroup Label="Documentation Resources">
+        <None Include="..\..\resources\docs\RELEASE_NOTES.md" Link=".resources\docs\RELEASE_NOTES.md"/>
+    </ItemGroup>
+
 </Project>
