@@ -26,6 +26,10 @@
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/tacosontitan/shoreline</RepositoryUrl>
     </PropertyGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="JetBrains.Annotations" Version="2023.3.0"/>
+    </ItemGroup>
 
     <ItemGroup Label="Testing References" Condition="'$(IsTestProject)' == 'true'" >
         <PackageReference Include="xunit" Version="2.7.0"/>

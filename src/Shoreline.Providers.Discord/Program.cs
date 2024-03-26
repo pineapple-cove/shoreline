@@ -1,3 +1,6 @@
+using Discord;
+using Discord.WebSocket;
+
 using Shoreline.Metrics;
 using Shoreline.Providers.Discord;
 
@@ -17,5 +20,6 @@ static void ConfigureApplication(HostBuilderContext context,
         .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
 static void ConfigureServices(IServiceCollection services) => services
-    .AddHostedService<Worker>()
-    .AddSingleton<IUptime, Uptime>();
+    .AddSingleton<DiscordSocketClient>()
+    .AddSingleton<IDiscordClient>(provider => provider.GetRequiredService<DiscordSocketClient>())
+    .AddHostedService<DiscordBot>();
