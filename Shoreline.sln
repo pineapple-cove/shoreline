@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoreline.Providers.Discord", "src\Shoreline.Providers.Discord\Shoreline.Providers.Discord.csproj", "{57522DAC-FB06-44E1-B469-4D6369502F9C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D59F09-9FA5-43A7-B554-2472FAD4EE9D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoreline.Commands", "src\Shoreline.Commands\Shoreline.Commands.csproj", "{B4AC55DB-7089-4066-A351-CD912B70E572}"
@@ -26,10 +24,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57522DAC-FB06-44E1-B469-4D6369502F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B4AC55DB-7089-4066-A351-CD912B70E572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B4AC55DB-7089-4066-A351-CD912B70E572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4AC55DB-7089-4066-A351-CD912B70E572}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -43,7 +37,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{57522DAC-FB06-44E1-B469-4D6369502F9C} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
 		{B4AC55DB-7089-4066-A351-CD912B70E572} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
 		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
 	EndGlobalSection

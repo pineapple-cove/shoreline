@@ -1,11 +1,12 @@
 ﻿services:
-  discord:
+  bot:
+    container_name: shoreline
     build:
-      context: ./src/Shoreline.Providers.Discord
+      context: ./src/Shoreline
       dockerfile: Dockerfile
     restart: always
     volumes:
-      - ./src/Shoreline.Providers.Discord/appsettings.json:/app/appsettings.json
-      - ./src/Shoreline.Providers.Discord/secrets.json:/app/secrets.json
+      - ./src/Shoreline/appsettings.json:/app/appsettings.json
+      - ./src/Shoreline/secrets.json:/app/secrets.json
     env_file:
       - .env

@@ -16,15 +16,17 @@
 
     <ItemGroup>
         <PackageReference Include="Discord.Net" Version="3.14.1" />
-        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0"/>
-        <PackageReference Include="Shoreline" Version="1.0.0-preview.1" />
-        <PackageReference Include="Shoreline.Commands" Version="1.0.0-preview.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
     </ItemGroup>
 
     <ItemGroup>
         <Content Include="..\..\.dockerignore">
             <Link>.dockerignore</Link>
         </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Shoreline.Commands\Shoreline.Commands.csproj" />
     </ItemGroup>
 
 </Project>
