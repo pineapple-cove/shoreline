@@ -1,12 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoreline.Providers.Discord", "src\Shoreline.Providers.Discord\Shoreline.Providers.Discord.csproj", "{57522DAC-FB06-44E1-B469-4D6369502F9C}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34607.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoreline.Providers.Discord", "src\Shoreline.Providers.Discord\Shoreline.Providers.Discord.csproj", "{57522DAC-FB06-44E1-B469-4D6369502F9C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13D59F09-9FA5-43A7-B554-2472FAD4EE9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoreline.Commands", "src\Shoreline.Commands\Shoreline.Commands.csproj", "{B4AC55DB-7089-4066-A351-CD912B70E572}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoreline.Commands", "src\Shoreline.Commands\Shoreline.Commands.csproj", "{B4AC55DB-7089-4066-A351-CD912B70E572}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shoreline", "src\Shoreline\Shoreline.csproj", "{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shoreline", "src\Shoreline\Shoreline.csproj", "{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3C2479D8-8B9B-44B7-8F57-B413276D6E26}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		docker-compose.yml = docker-compose.yml
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +39,15 @@ Global
 		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{57522DAC-FB06-44E1-B469-4D6369502F9C} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
 		{B4AC55DB-7089-4066-A351-CD912B70E572} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
 		{E41E022D-F4BA-4ADB-8F88-C8CEB6D25460} = {13D59F09-9FA5-43A7-B554-2472FAD4EE9D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB1E7CD2-F4F7-4E7C-9A37-410B7C3A2DEF}
 	EndGlobalSection
 EndGlobal

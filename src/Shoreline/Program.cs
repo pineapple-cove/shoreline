@@ -1,7 +1,6 @@
 using Discord;
 using Discord.WebSocket;
 
-using Shoreline.Metrics;
 using Shoreline.Providers.Discord;
 using Shoreline.Providers.Discord.Variables;
 
@@ -14,10 +13,11 @@ host.Run();
 
 return;
 
-static void ConfigureApplication(HostBuilderContext context,
-    IConfigurationBuilder configuration) =>
-    configuration.AddEnvironmentVariables(nameof(Shoreline))
-        .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+static void ConfigureApplication(
+    HostBuilderContext context,
+    IConfigurationBuilder configuration) => configuration
+    .AddEnvironmentVariables(nameof(Shoreline))
+    .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
 static void ConfigureServices(IServiceCollection services) => services
     .AddSingleton<DiscordSocketClient>()

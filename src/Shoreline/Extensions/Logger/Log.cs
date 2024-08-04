@@ -26,7 +26,7 @@ public static class LoggerExtensions
         ArgumentNullException.ThrowIfNull(logger, nameof(logger));
         ArgumentNullException.ThrowIfNull(message, nameof(message));
         ArgumentException.ThrowIfNullOrWhiteSpace(message.Message, nameof(message.Message));
-        
+
         var level = message.Severity.GetLogLevel();
         logger.Log(level, message.Exception, message.Message);
     }

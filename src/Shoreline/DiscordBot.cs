@@ -1,9 +1,9 @@
-using System.Diagnostics.CodeAnalysis;
-
 using Discord;
 using Discord.WebSocket;
 
 using Shoreline.Providers.Discord.Variables;
+
+using System.Diagnostics.CodeAnalysis;
 
 namespace Shoreline.Providers.Discord;
 
@@ -21,10 +21,13 @@ internal sealed class DiscordBot(
     IEnvironmentVariable<DiscordToken> token,
     IHostApplicationLifetime lifetime) : IHostedService
 {
+    public readonly string _sample = "sample";
+
     /// <inheritdoc />
     public async Task StartAsync(
         CancellationToken cancellationToken)
     {
+        Console.WriteLine(_sample);
         logger.LogInformation("Attempting to connect to Discord.");
         if (string.IsNullOrWhiteSpace(token.Value))
         {
@@ -45,10 +48,10 @@ internal sealed class DiscordBot(
         logger.LogInformation("Attempting to disconnect from Discord.");
         await client.LogoutAsync().ConfigureAwait(false);
         await client.StopAsync().ConfigureAwait(false);
-        
+
         client.Log -= LogAsync;
     }
-    
+
     private Task LogAsync(
         LogMessage message)
     {

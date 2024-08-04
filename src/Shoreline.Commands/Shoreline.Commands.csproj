@@ -5,6 +5,8 @@
         <PackageVersion>1.0.0-preview.1</PackageVersion>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
 
         <Description>Contains commands for chatbots.</Description>
         <PackageTags>shoreline;chatbot;commands</PackageTags>

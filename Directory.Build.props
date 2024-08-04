@@ -1,9 +1,6 @@
 ﻿<Project>
 
     <PropertyGroup Label="General Project Details">
-        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-
         <Title>$(AssemblyName)</Title>
         <FileVersion>$(Version)</FileVersion>
         <AssemblyVersion>$(Version)</AssemblyVersion>

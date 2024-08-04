@@ -1,24 +1,30 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
     <PropertyGroup>
-        <Version>1.0.0</Version>
-        <PackageVersion>1.0.0-preview.1</PackageVersion>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-
-        <Description>Essential components for Shoreline bots.</Description>
-        <PackageTags>shoreline;chatbot</PackageTags>
-    </PropertyGroup>
-    
-    <PropertyGroup>
-        <LangVersion>latest</LangVersion>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
+
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>true</ImplicitUsings>
         <Nullable>enable</Nullable>
+
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <UserSecretsId>dotnet-shoreline-D8FDF9C8-637C-483F-A449-3A359E2B17EC</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
+        <PackageReference Include="Discord.Net" Version="3.14.1" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0"/>
+        <PackageReference Include="Shoreline" Version="1.0.0-preview.1" />
+        <PackageReference Include="Shoreline.Commands" Version="1.0.0-preview.1" />
     </ItemGroup>
-    
+
+    <ItemGroup>
+        <Content Include="..\..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
+    </ItemGroup>
+
 </Project>

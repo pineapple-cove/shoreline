@@ -17,12 +17,12 @@ public sealed class ClassicCommandAttribute(
     /// Gets the prefix of the command.
     /// </summary>
     public char Prefix { get; } = prefix;
-    
+
     /// <summary>
     /// Gets the name of the command.
     /// </summary>
     public string Name { get; } = name;
-    
+
     /// <summary>
     /// Gets the description of the command.
     /// </summary>

@@ -1,4 +1,4 @@
-﻿namespace Shoreline.Commands;
+﻿namespace Shoreline;
 
 /// <summary>
 /// Represents a query that can be executed.
